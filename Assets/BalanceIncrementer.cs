@@ -8,7 +8,7 @@ public class BalanceIncrementer : MonoBehaviour
     public TextMeshProUGUI text;
 
     int frameCounter = 0;
-    int balance = 123;
+    public int balance = 123;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +19,9 @@ public class BalanceIncrementer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        text.text = "Balance: $" + balance;
         if ((frameCounter++ % 60) == 0) {
-            text.text = "Balance: $" + balance++;
+            balance++;
         }
     }
 }
