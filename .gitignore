@@ -46,3 +46,7 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+ProjectSettings/ProjectSettings.asset
+UserSettings/EditorUserSettings.asset
+UserSettings/Layouts/*
