@@ -25,7 +25,7 @@ namespace Platformer.Mechanics
         /// <summary>
         /// Initial jump velocity at the start of a jump.
         /// </summary>
-        public float jumpTakeOffSpeed = 7;
+        public float jumpTakeOffSpeed = 0.1f;
 
         public JumpState jumpState = JumpState.Grounded;
         private bool stopJump;
@@ -83,39 +83,21 @@ namespace Platformer.Mechanics
                     stopJump = false;
                     break;
                 case JumpState.Jumping:
-                    if (!IsGrounded)
-                    {
-                        Schedule<PlayerJumped>().player = this;
-                        jumpState = JumpState.InFlight;
-                    }
-                    break;
-                case JumpState.InFlight:
                     if (IsGrounded)
                     {
                         Schedule<PlayerLanded>().player = this;
-                        jumpState = JumpState.Landed;
+                        jumpState = JumpState.Grounded;
                     }
-                    break;
-                case JumpState.Landed:
-                    jumpState = JumpState.Grounded;
                     break;
             }
         }
 
         protected override void ComputeVelocity()
         {
-            if (jump && IsGrounded)
+            if (jump)
             {
                 velocity.y = jumpTakeOffSpeed * model.jumpModifier;
                 jump = false;
-            }
-            else if (stopJump)
-            {
-                stopJump = false;
-                if (velocity.y > 0)
-                {
-                    velocity.y = velocity.y * model.jumpDeceleration;
-                }
             }
 
             if (move.x > 0.01f)
