@@ -15,7 +15,7 @@ MonoBehaviour:
   question: 'WELCOME TO YOU FIRST DAY OF WORK!
 
     Let''s start with definitions
-    first, What is the definition Computer Science?'
+    first, What is the definition of Computer Science?'
   answers:
   - Computer science is the study of algorithms, data structures, and computation.
   - Computer science is the field of study that deals with the theory, design, development,
