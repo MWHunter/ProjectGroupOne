@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Question 2
   m_EditorClassIdentifier: 
-  question: What is a variable?
+  question: What is an algorithm?
   answers:
-  - s
-  - 
-  - 
-  - 
-  correctAnswerIndex: 0
+  - A type of programming language
+  - A set of instructions to solve a problem
+  - A type of computer hardware
+  - A way to save data in a file
+  correctAnswerIndex: 1
