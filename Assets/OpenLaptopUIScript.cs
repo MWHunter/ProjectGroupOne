@@ -7,6 +7,6 @@ public class OpenLaptopUIScript : MonoBehaviour
 
     public void OnMouseDown()
     {
-        SceneManager.LoadScene("LaptopUI", LoadSceneMode.Single);
+        SceneManager.LoadScene(2);
     }
 }

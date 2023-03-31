@@ -8,17 +8,33 @@ public class Quiz : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] List<QuestionSO> questions = new List<QuestionSO>();
+    [SerializeField] List<QuestionSO> Mathquestions = new List<QuestionSO>();
+    [SerializeField] List<QuestionSO> CSquestions = new List<QuestionSO>();
     QuestionSO currentQuestion;
     [SerializeField] GameObject[] answerButtons;
     [SerializeField] Sprite defaultAnswerSprite;
     [SerializeField] Sprite correctAnswerSprite;
     [SerializeField] Button nextQuestionButton;
 
+
     void Start()
     {
+        
+        string quizType = PlayerPrefs.GetString("QuizType", "Computer Science");
+        if (quizType == "Math")
+        {
+            questions = Mathquestions;
+        }
+        else
+        {
+            questions = CSquestions;
+        }
         GetNextQuestion();
+       
     }
 
+
+  
     public void OnAnswerSelected(int index)
     {
         Image buttonImage;
@@ -60,7 +76,7 @@ public class Quiz : MonoBehaviour
         }
         else
         {
-            questionText.text = "Quiz Completed!";
+            questionText.text = "Your task for today is finished!";
             SetButtonState(false);
         }
     }
