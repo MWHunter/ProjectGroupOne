@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Quiz : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI questionText;
+   
     [SerializeField] List<QuestionSO> questions = new List<QuestionSO>();
     [SerializeField] List<QuestionSO> Mathquestions = new List<QuestionSO>();
     [SerializeField] List<QuestionSO> CSquestions = new List<QuestionSO>();
@@ -15,11 +16,18 @@ public class Quiz : MonoBehaviour
     [SerializeField] Sprite defaultAnswerSprite;
     [SerializeField] Sprite correctAnswerSprite;
     [SerializeField] Button nextQuestionButton;
+    [SerializeField] BalanceIncrementer balanceIncrementer;
+    public GameObject balanceTracker;
+    
 
+    int correctAnswerReward = 50;
+    int wrongAnswerPenalty = 20;
 
     void Start()
     {
         
+        balanceIncrementer = balanceTracker.GetComponent<BalanceIncrementer>();
+    
         string quizType = PlayerPrefs.GetString("QuizType", "Computer Science");
         if (quizType == "Math")
         {
@@ -42,6 +50,7 @@ public class Quiz : MonoBehaviour
         if(index == currentQuestion.getCorrectAnswerIndex())
         {
             questionText.text = "Correct!";
+            balanceIncrementer.AddBalance(correctAnswerReward);
             buttonImage = answerButtons[index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
         }
@@ -50,6 +59,7 @@ public class Quiz : MonoBehaviour
             int correctAnswerIndex = currentQuestion.getCorrectAnswerIndex();
             string correctAnswer = currentQuestion.getAnswer(correctAnswerIndex);
             questionText.text = "Sorry, the correct answer was;\n" + correctAnswer;
+            balanceIncrementer.AddBalance(-wrongAnswerPenalty);
             buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
         }
