@@ -32,6 +32,7 @@ namespace Platformer.Mechanics
         /*internal new*/ public AudioSource audioSource;
         public Health health;
         public bool controlEnabled = true;
+        SpriteSheetAnimator spriteSheetAnimator;
 
         bool jump;
         Vector2 move;
@@ -46,6 +47,7 @@ namespace Platformer.Mechanics
             audioSource = GetComponent<AudioSource>();
             collider2d = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteSheetAnimator = GetComponent<SpriteSheetAnimator>();
         }
 
         protected override void Update()
@@ -95,21 +97,13 @@ namespace Platformer.Mechanics
                 jump = false;
             }
 
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                Transform child = transform.GetChild(i);
-                // Access the SpriteRenderer and Animator components here
-                SpriteRenderer spriteRenderer = child.GetComponent<SpriteRenderer>();
-                Animator animator = child.GetComponent<Animator>();
+            if (move.x > 0.01f)
+                spriteSheetAnimator.SetFlipX(false);
+            else if (move.x < -0.01f)
+                spriteSheetAnimator.SetFlipX(true);
 
-                if (move.x > 0.01f)
-                    spriteRenderer.flipX = false;
-                else if (move.x < -0.01f)
-                    spriteRenderer.flipX = true;
-
-                animator.SetBool("grounded", IsGrounded);
-                animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
-            }
+            //animator.SetBool("grounded", IsGrounded);
+            //animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
             targetVelocity = move * maxSpeed;
         }
