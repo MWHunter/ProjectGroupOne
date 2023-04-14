@@ -5,7 +5,6 @@ public class BuyItemScript : MonoBehaviour
 {
     public GameObject balanceTracker;
     public int itemCost;
-    
 
     private BalanceIncrementer balanceInc;
     private Button myButton;
@@ -26,11 +25,15 @@ public class BuyItemScript : MonoBehaviour
         }
     }
 
-    void Update() {
-        bool hasEnoughMoney = balanceInc != null && balanceInc.balance >= itemCost;
-        if (hasEnoughMoney) {
+    void Update()
+    {
+        bool hasEnoughMoney = GameManager.Instance.balance >= itemCost;
+        if (hasEnoughMoney)
+        {
             // Do something if the player has enough money
-        } else {
+        }
+        else
+        {
             // Do something else if the player doesn't have enough money
         }
     }
@@ -42,14 +45,14 @@ public class BuyItemScript : MonoBehaviour
             return;
         }
 
-        if (balanceInc.balance >= itemCost) {
+        if (GameManager.Instance.balance >= itemCost)
+        {
             balanceInc.AddBalance(-itemCost); // Deduct the item cost from the balance using AddBalance() method
         }
     }
 
     private void OnBalanceChanged(int newBalance)
     {
-        
         Debug.Log("Balance changed to: $" + newBalance);
     }
 
