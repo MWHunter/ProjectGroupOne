@@ -25,15 +25,15 @@ public class SpriteSheetAnimator : MonoBehaviour
     public float timeInterval = 0.3f;
     private float timer = 0f;
 
-    private Sprite[] headSprite;
-    private Sprite[] chestSprite;
-    private Sprite[] legSprite;
+    public Sprite[] headSprite;
+    public Sprite[] chestSprite;
+    public Sprite[] legSprite;
 
     void Start()
     {
-        headSprite = Random.Range(0, 2) == 1 ? headSprite1 : headSprite2;
-        chestSprite = Random.Range(0, 2) == 1 ? chestSprite1 : chestSprite2;
-        legSprite = Random.Range(0, 2) == 1 ? legSprite1 : legSprite2;
+        headSprite = headSprite1;
+        chestSprite = chestSprite1;
+        legSprite = legSprite1;
         setSprites();
     }
 
