@@ -3,64 +3,47 @@ using UnityEngine.UI;
 
 public class BuyItemScript : MonoBehaviour
 {
-    public GameObject balanceTracker;
     public int itemCost;
+    public int buttonId;
 
-    private BalanceIncrementer balanceInc;
+    public GameObject player;
     private Button myButton;
+
+    private SpriteSheetAnimator spriteSheetAnimator;
 
     private void Start()
     {
         myButton = GetComponent<Button>();
         myButton.onClick.AddListener(HandleButtonClick);
 
-        balanceInc = balanceTracker.GetComponent<BalanceIncrementer>();
-        if (balanceInc == null)
-        {
-            Debug.LogError("No BalanceIncrementer component found on the balanceTracker object.");
-        }
-        else
-        {
-            balanceInc.BalanceChanged += OnBalanceChanged; // Subscribe to the BalanceChanged event
-        }
-    }
-
-    void Update()
-    {
-        bool hasEnoughMoney = GameManager.Instance.balance >= itemCost;
-        if (hasEnoughMoney)
-        {
-            // Do something if the player has enough money
-        }
-        else
-        {
-            // Do something else if the player doesn't have enough money
-        }
+        spriteSheetAnimator = player.GetComponent<SpriteSheetAnimator>();
     }
 
     private void HandleButtonClick()
     {
-        if (balanceInc == null)
-        {
-            return;
-        }
-
         if (GameManager.Instance.balance >= itemCost)
         {
-            balanceInc.AddBalance(-itemCost); // Deduct the item cost from the balance using AddBalance() method
-        }
-    }
+            GameManager.Instance.DeductBalance(itemCost);
 
-    private void OnBalanceChanged(int newBalance)
-    {
-        Debug.Log("Balance changed to: $" + newBalance);
-    }
-
-    private void OnDestroy()
-    {
-        if (balanceInc != null)
-        {
-            balanceInc.BalanceChanged -= OnBalanceChanged; // Unsubscribe from the BalanceChanged event
+            // Hunter wrote this, it's terrible code and you should never write code like this.
+            // it's just faster to do it wrong and it shouldn't matter since it's a school project
+            if (buttonId == 1)
+            {
+                // Button for upgraded hat that gives 25% at a bonus $50 per question
+                spriteSheetAnimator.headSprite = spriteSheetAnimator.headSprite2;
+                GameManager.Instance.bonusChance = 0.25;
+            }
+            else if (buttonId == 2)
+            {
+                // A shirt to add an extra $50 per question
+                spriteSheetAnimator.chestSprite = spriteSheetAnimator.chestSprite2;
+                GameManager.Instance.bonusConstant = 50;
+            }
+            else if (buttonId == 3) {
+                // Pants to double the extra money for each question
+                spriteSheetAnimator.legSprite = spriteSheetAnimator.legSprite2;
+                GameManager.Instance.bonusMultiplier = 2;
+            }
         }
     }
 }
