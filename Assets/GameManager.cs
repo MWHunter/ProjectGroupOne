@@ -4,6 +4,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public int balance;
+    public int levelIndex = 0; // Update to levelIndex
+    public int correctAnswers = 0;
 
     private void Awake()
     {
