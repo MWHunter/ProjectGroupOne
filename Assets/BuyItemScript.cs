@@ -1,40 +1,49 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class BuyItemScript : MonoBehaviour
 {
-    public GameObject balanceTracker;
     public int itemCost;
+    public int buttonId;
+
+    public GameObject player;
+    private Button myButton;
+
+    private SpriteSheetAnimator spriteSheetAnimator;
 
     private void Start()
     {
-        Button myButton = GetComponent<Button>();
+        myButton = GetComponent<Button>();
         myButton.onClick.AddListener(HandleButtonClick);
-    }
 
-    void Update() {
-        BalanceIncrementer balanceInc = balanceTracker.GetComponent<BalanceIncrementer>();
-        Button myButton = GetComponent<Button>();
-
-        bool hasEnoughMoney = balanceInc.balance >= itemCost;
-        if (hasEnoughMoney) {
-
-        } else {
-
-        }
+        spriteSheetAnimator = player.GetComponent<SpriteSheetAnimator>();
     }
 
     private void HandleButtonClick()
     {
-        Debug.Log("Handled click");
-        BalanceIncrementer balanceInc = balanceTracker.GetComponent<BalanceIncrementer>();
-        if (balanceInc.balance >= itemCost) {
-            balanceInc.balance -= itemCost;
+        if (GameManager.Instance.balance >= itemCost)
+        {
+            GameManager.Instance.DeductBalance(itemCost);
+
+            // Hunter wrote this, it's terrible code and you should never write code like this.
+            // it's just faster to do it wrong and it shouldn't matter since it's a school project
+            if (buttonId == 1)
+            {
+                // Button for upgraded hat that gives 25% at a bonus $50 per question
+                spriteSheetAnimator.headSprite = spriteSheetAnimator.headSprite2;
+                GameManager.Instance.bonusChance = 0.25;
+            }
+            else if (buttonId == 2)
+            {
+                // A shirt to add an extra $50 per question
+                spriteSheetAnimator.chestSprite = spriteSheetAnimator.chestSprite2;
+                GameManager.Instance.bonusConstant = 50;
+            }
+            else if (buttonId == 3) {
+                // Pants to double the extra money for each question
+                spriteSheetAnimator.legSprite = spriteSheetAnimator.legSprite2;
+                GameManager.Instance.bonusMultiplier = 2;
+            }
         }
-        
-        Debug.Log("Done click " + balanceInc.balance);
     }
 }

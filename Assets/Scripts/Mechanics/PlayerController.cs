@@ -28,16 +28,15 @@ namespace Platformer.Mechanics
         public float jumpTakeOffSpeed = 0.1f;
 
         public JumpState jumpState = JumpState.Grounded;
-        private bool stopJump;
         /*internal new*/ public Collider2D collider2d;
         /*internal new*/ public AudioSource audioSource;
         public Health health;
         public bool controlEnabled = true;
+        SpriteSheetAnimator spriteSheetAnimator;
 
         bool jump;
         Vector2 move;
         SpriteRenderer spriteRenderer;
-        internal Animator animator;
         readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public Bounds Bounds => collider2d.bounds;
@@ -48,7 +47,7 @@ namespace Platformer.Mechanics
             audioSource = GetComponent<AudioSource>();
             collider2d = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
-            animator = GetComponent<Animator>();
+            spriteSheetAnimator = GetComponent<SpriteSheetAnimator>();
         }
 
         protected override void Update()
@@ -60,7 +59,6 @@ namespace Platformer.Mechanics
                     jumpState = JumpState.PrepareToJump;
                 else if (Input.GetButtonUp("Jump"))
                 {
-                    stopJump = true;
                     Schedule<PlayerStopJump>().player = this;
                 }
             }
@@ -80,7 +78,6 @@ namespace Platformer.Mechanics
                 case JumpState.PrepareToJump:
                     jumpState = JumpState.Jumping;
                     jump = true;
-                    stopJump = false;
                     break;
                 case JumpState.Jumping:
                     if (IsGrounded)
@@ -101,12 +98,12 @@ namespace Platformer.Mechanics
             }
 
             if (move.x > 0.01f)
-                spriteRenderer.flipX = false;
+                spriteSheetAnimator.SetFlipX(false);
             else if (move.x < -0.01f)
-                spriteRenderer.flipX = true;
+                spriteSheetAnimator.SetFlipX(true);
 
-            animator.SetBool("grounded", IsGrounded);
-            animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
+            //animator.SetBool("grounded", IsGrounded);
+            //animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
             targetVelocity = move * maxSpeed;
         }

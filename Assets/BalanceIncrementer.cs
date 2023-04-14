@@ -1,27 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 
 public class BalanceIncrementer : MonoBehaviour
 {
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI Balancetext;
 
-    int frameCounter = 0;
-    public int balance = 123;
+    public event Action<int> BalanceChanged;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        Balancetext = GetComponent<TextMeshProUGUI>();
+        UpdateBalanceText();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        text.text = "Balance: $" + balance;
-        if ((frameCounter++ % 60) == 0) {
-            balance++;
+        UpdateBalanceText();
+    }
+
+    private void UpdateBalanceText()
+    {
+        if (Balancetext != null)
+        {
+            Balancetext.text = "Balance: $" + GameManager.Instance.balance;
         }
+    }
+
+    public void AddBalance(int amount)
+    {
+        GameManager.Instance.AddBalance(amount);
+        UpdateBalanceText();
+        BalanceChanged?.Invoke(GameManager.Instance.balance);
     }
 }
