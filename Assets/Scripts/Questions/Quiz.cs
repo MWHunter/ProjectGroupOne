@@ -60,6 +60,7 @@ public class Quiz : MonoBehaviour
             GameManager.Instance.correctAnswers++; // Increment the correct answers count
             CheckLevelUp();
             questionText.text = "Correct!";
+            GameManager.Instance.AddBalance(correctAnswerReward);
             GameManager.Instance.AddBalance(levels[GameManager.Instance.levelIndex].correctAnswerReward); // Update to use the reward from the levels list
             buttonImage = answerButtons[index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;;
@@ -69,7 +70,7 @@ public class Quiz : MonoBehaviour
             int correctAnswerIndex = currentQuestion.getCorrectAnswerIndex();
             string correctAnswer = currentQuestion.getAnswer(correctAnswerIndex);
             questionText.text = "Sorry, the correct answer was;\n" + correctAnswer;
-            GameManager.Instance.AddBalance(-wrongAnswerPenalty);
+            //GameManager.Instance.AddBalance(-wrongAnswerPenalty);
             buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
         }
