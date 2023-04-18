@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class helpBehavior : MonoBehaviour
+public class changeBackground : MonoBehaviour
 {
     public GameObject objectToToggle;
+    public GameObject objectToToggle2;
     public TextMeshProUGUI menuText;
 
     private void Start()
@@ -20,10 +21,15 @@ public class helpBehavior : MonoBehaviour
         // Add your code here to handle the button click event
         objectToToggle.SetActive(!objectToToggle.activeSelf);
 
-        if (menuText.text == "Open Help"){
-            menuText.text = "Close Help";
+        if (menuText.text == "City Office"){
+            objectToToggle.SetActive(false);
+            objectToToggle2.SetActive(true);
+            menuText.text = "Country Office";
+            
         } else {
-            menuText.text = "Open Help";
+            objectToToggle.SetActive(true);
+            objectToToggle2.SetActive(false);
+            menuText.text = "City Office";
         }
     }
 }
