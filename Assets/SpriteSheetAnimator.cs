@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEditor;
-using UnityEditor.Animations;
 
 
 public class SpriteSheetAnimator : MonoBehaviour
