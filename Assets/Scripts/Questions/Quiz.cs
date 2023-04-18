@@ -8,6 +8,8 @@ public class Quiz : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] TextMeshProUGUI congratulationsText;
+    [SerializeField] private AudioSource congratulationsAudio;
+
    
     [SerializeField] List<QuestionSO> questions = new List<QuestionSO>();
     [SerializeField] List<QuestionSO> Mathquestions = new List<QuestionSO>();
@@ -43,6 +45,9 @@ public class Quiz : MonoBehaviour
         {
             questions = CSquestions;
         }
+
+
+        
         GetNextQuestion();
         
         UpdateLevelText();
@@ -54,6 +59,7 @@ public class Quiz : MonoBehaviour
     public void OnAnswerSelected(int index)
     {
         Image buttonImage;
+        
 
         if(index == currentQuestion.getCorrectAnswerIndex())
         {
@@ -87,6 +93,8 @@ public class Quiz : MonoBehaviour
 
     void GetNextQuestion()
     {
+
+    
         if(questions.Count > 0)
         {
             SetButtonState(true);
@@ -141,6 +149,8 @@ public class Quiz : MonoBehaviour
         // GameManager.Instance.correctAnswers = 0;
         UpdateLevelText();
          StartCoroutine(DisplayCongratulationsText("Congratulations! You have been promoted to " + levels[GameManager.Instance.levelIndex].levelName + "!"));
+        
+
     }
 }
 
@@ -155,9 +165,11 @@ public class Quiz : MonoBehaviour
     }
     IEnumerator DisplayCongratulationsText(string message)
 {
+    congratulationsAudio.Play();
     congratulationsText.text = message;
     yield return new WaitForSeconds(3);
     congratulationsText.text = "";
+     
 }
 
 }

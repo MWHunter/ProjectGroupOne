@@ -1,16 +1,25 @@
 using UnityEngine;
+using System.Collections.Generic;
 using System;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public int balance = 2000;
+      
+       public int currentQuestionIndex = 0;
+    public List<QuestionSO> remainingQuestions;
+    public int balance = 0;
 
     public double bonusChance = 0;
     public int bonusConstant = 0;
     public double bonusMultiplier = 1;
     public int levelIndex = 0; // Update to levelIndex
     public int correctAnswers = 0;
+     public bool quizInitialized = false;
+    [SerializeField] private ClickSound clickSound;
+
+
+
 
     private void Awake()
     {
@@ -23,6 +32,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
     }
 
     public void AddBalance(int amount)
