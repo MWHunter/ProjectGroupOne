@@ -863,7 +863,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -493, y: 413.85}
+  m_AnchoredPosition: {x: -533.1, y: 389.2}
   m_SizeDelta: {x: -1053.4, y: -914.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243445306
@@ -913,8 +913,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 7
@@ -1368,7 +1368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 406.40002, y: -28.446991}
+  m_AnchoredPosition: {x: 441.8, y: -28.446991}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &416613775
@@ -2400,7 +2400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 659.2, y: -28.446991}
+  m_AnchoredPosition: {x: 636.4, y: -28.446991}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &563724917
@@ -3175,7 +3175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &671628297
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3193,7 +3193,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -493, y: 448.7}
+  m_AnchoredPosition: {x: -536.9, y: 472.7}
   m_SizeDelta: {x: -1053.4, y: -914.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &671628299
@@ -3243,8 +3243,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 57
+  m_fontSizeBase: 57
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 7
@@ -4728,12 +4728,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e86849815f9b444a0d60d34632b1f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentQuestionIndex: 0
+  remainingQuestions: []
   balance: 0
   bonusChance: 0
   bonusConstant: 0
   bonusMultiplier: 1
   levelIndex: 0
   correctAnswers: 0
+  quizInitialized: 0
   clickSound: {fileID: 0}
 --- !u!1 &1514871433
 GameObject:
@@ -6157,7 +6160,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2550566963319695755
 MonoBehaviour:
