@@ -11,12 +11,14 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
         PlayerPrefs.SetString("QuizType", "Computer Science");
+        Quiz.curQuestionIndex = -1;
     }
 
     public void Math()
     {
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
         PlayerPrefs.SetString("QuizType", "Math");
+        Quiz.curQuestionIndex = -1;
     }
 
     public void Quit()
