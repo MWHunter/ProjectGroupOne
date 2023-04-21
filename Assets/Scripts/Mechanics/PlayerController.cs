@@ -97,6 +97,7 @@ namespace Platformer.Mechanics
                 jump = false;
             }
 
+            spriteSheetAnimator.setWalk(Mathf.Abs(move.x) > 0.01f);
             if (move.x > 0.01f)
                 spriteSheetAnimator.SetFlipX(false);
             else if (move.x < -0.01f)

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 808f5a99197ef0344ba2e01ceb6a925a
+guid: b1c996ab9d78a8c479ec908564bd7116
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -129,12 +129,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_skin_0
+      name: walk_hat_2_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 23
         y: 0
-        width: 44
+        width: 53
         height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c6f0b80b3fe8224d97b9e35d133c226
-      internalID: -1274941762
+      spriteID: 16ccca5fee5315b42b3af55dae9f767e
+      internalID: 463770107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_skin_1
+      name: walk_hat_2_1
       rect:
         serializedVersion: 2
-        x: 164
+        x: 176
         y: 0
-        width: 44
-        height: 79
+        width: 35
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,19 +164,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30a387c677a18764abd3bced9302f694
-      internalID: 889767963
+      spriteID: 97a6c2c384f19de4da4c9b6e7b986b9c
+      internalID: 1185818979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_skin_2
+      name: walk_hat_2_2
       rect:
         serializedVersion: 2
         x: 305
         y: 0
-        width: 47
+        width: 59
         height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -185,19 +185,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cf4dd7375eb9394eb5b963253bb451b
-      internalID: 356728720
+      spriteID: cfd66900cb23d324997145b66df3800e
+      internalID: -2078907581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_skin_3
+      name: walk_hat_2_3
       rect:
         serializedVersion: 2
-        x: 449
+        x: 446
         y: 0
-        width: 47
+        width: 68
         height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -206,8 +206,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6374ca7d7b86e04f8217837a2d4be94
-      internalID: -85726646
+      spriteID: 8ea4d6fff8ccaf247923cb510889a04a
+      internalID: 154495644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_hat_2_4
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 35
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a51192d8bfd27445a3b52c433ea3911
+      internalID: -1129126193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_hat_2_5
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 0
+        width: 56
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d4dc2c52305db449b10a098b04462a
+      internalID: 725210064
       vertices: []
       indices: 
       edges: []
@@ -223,10 +265,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      idle_skin_2: 356728720
-      idle_skin_1: 889767963
-      idle_skin_0: -1274941762
-      idle_skin_3: -85726646
+      walk_hat_2_1: 1185818979
+      walk_hat_2_3: 154495644
+      walk_hat_2_0: 463770107
+      walk_hat_2_5: 725210064
+      walk_hat_2_2: -2078907581
+      walk_hat_2_4: -1129126193
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 808f5a99197ef0344ba2e01ceb6a925a
+guid: de4fbeae1eba0f741a964a37aef1f465
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -129,12 +129,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_skin_0
+      name: walk_pants_2_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 23
         y: 0
-        width: 44
+        width: 53
         height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c6f0b80b3fe8224d97b9e35d133c226
-      internalID: -1274941762
+      spriteID: d9ac266dab8974f4cb72f25ef9f31e1e
+      internalID: -349348864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_skin_1
+      name: walk_pants_2_1
       rect:
         serializedVersion: 2
-        x: 164
+        x: 176
         y: 0
-        width: 44
-        height: 79
+        width: 35
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,19 +164,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30a387c677a18764abd3bced9302f694
-      internalID: 889767963
+      spriteID: 7ec19bbfb6d45ba4eae4c73b021c88bb
+      internalID: -29871482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_skin_2
+      name: walk_pants_2_2
       rect:
         serializedVersion: 2
         x: 305
         y: 0
-        width: 47
+        width: 59
         height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -185,19 +185,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cf4dd7375eb9394eb5b963253bb451b
-      internalID: 356728720
+      spriteID: 9b296fa1eb6bd2e4b963cbed684ddadf
+      internalID: -52242126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_skin_3
+      name: walk_pants_2_3
       rect:
         serializedVersion: 2
-        x: 449
+        x: 446
         y: 0
-        width: 47
+        width: 68
         height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -206,8 +206,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6374ca7d7b86e04f8217837a2d4be94
-      internalID: -85726646
+      spriteID: 28fd5a1bcb342664590f9774463ce38b
+      internalID: -1471556389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_pants_2_4
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 35
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a792a6ef25a0ddc48920792af3ecf423
+      internalID: -1681211865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_pants_2_5
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 0
+        width: 56
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e45b67d92e5834409ac6f703937de05
+      internalID: -739345944
       vertices: []
       indices: 
       edges: []
@@ -223,10 +265,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      idle_skin_2: 356728720
-      idle_skin_1: 889767963
-      idle_skin_0: -1274941762
-      idle_skin_3: -85726646
+      walk_pants_2_4: -1681211865
+      walk_pants_2_1: -29871482
+      walk_pants_2_0: -349348864
+      walk_pants_2_2: -52242126
+      walk_pants_2_3: -1471556389
+      walk_pants_2_5: -739345944
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

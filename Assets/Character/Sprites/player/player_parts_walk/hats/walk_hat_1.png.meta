@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 808f5a99197ef0344ba2e01ceb6a925a
+guid: 466b882462afebd439accc2136a6c41a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -129,85 +129,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_skin_0
+      name: walk_hat_1_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 23
         y: 0
-        width: 44
+        width: 53
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c6f0b80b3fe8224d97b9e35d133c226
-      internalID: -1274941762
+      spriteID: 9af0fb99ce2e3024e9f77e706b16d2a0
+      internalID: -1019414967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_skin_1
+      name: walk_hat_1_1
       rect:
         serializedVersion: 2
-        x: 164
+        x: 176
         y: 0
-        width: 44
-        height: 79
+        width: 35
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30a387c677a18764abd3bced9302f694
-      internalID: 889767963
+      spriteID: 931f51821d25a774b84642cfaeca26b4
+      internalID: -1201618551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_skin_2
+      name: walk_hat_1_2
       rect:
         serializedVersion: 2
         x: 305
         y: 0
-        width: 47
+        width: 59
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cf4dd7375eb9394eb5b963253bb451b
-      internalID: 356728720
+      spriteID: cb7e8df4c2bfc8c459a0239affbd70d3
+      internalID: -301034418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_skin_3
+      name: walk_hat_1_3
       rect:
         serializedVersion: 2
-        x: 449
+        x: 446
         y: 0
-        width: 47
+        width: 68
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6374ca7d7b86e04f8217837a2d4be94
-      internalID: -85726646
+      spriteID: ed1d2f66ecdc6e14a9df2619942dac14
+      internalID: 618776963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_hat_1_4
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 35
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0600806ec3d89344daa066221a72f178
+      internalID: 1325383596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_hat_1_5
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 0
+        width: 56
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb55690a5d4e6ee4baf0825e0447b45a
+      internalID: -1431393642
       vertices: []
       indices: 
       edges: []
@@ -223,10 +265,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      idle_skin_2: 356728720
-      idle_skin_1: 889767963
-      idle_skin_0: -1274941762
-      idle_skin_3: -85726646
+      walk_hat_1_1: -1201618551
+      walk_hat_1_0: -1019414967
+      walk_hat_1_2: -301034418
+      walk_hat_1_3: 618776963
+      walk_hat_1_4: 1325383596
+      walk_hat_1_5: -1431393642
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -6,15 +6,22 @@ using UnityEditor;
 public class SpriteSheetAnimator : MonoBehaviour
 {
     public Sprite[] headSprite1;
+    public Sprite[] headSprite1Walk;
     public Sprite[] headSprite2;
+    public Sprite[] headSprite2Walk;
 
     public Sprite[] chestSprite1;
+    public Sprite[] chestSprite1Walk;
     public Sprite[] chestSprite2;
+    public Sprite[] chestSprite2Walk;
 
     public Sprite[] legSprite1;
+    public Sprite[] legSprite1Walk;
     public Sprite[] legSprite2;
+    public Sprite[] legSprite2Walk;
 
     public Sprite[] skinSprite;
+    public Sprite[] skinSpriteWalk;
 
     public int headIndex = 0;
     public int chestIndex = 0;
@@ -27,6 +34,8 @@ public class SpriteSheetAnimator : MonoBehaviour
     public Sprite[] headSprite;
     public Sprite[] chestSprite;
     public Sprite[] legSprite;
+
+    bool isWalk;
 
     void Start()
     {
@@ -42,28 +51,66 @@ public class SpriteSheetAnimator : MonoBehaviour
         {
             timer = 0f;
             animationIndex++;
-            animationIndex = animationIndex % 4;
         }
         setSprites();
     }
 
     void setSprites() {
+        // blame hunter for this code :) it's terrible but gets the job done.
+        Sprite[] thiscode = headSprite;
+        Sprite[] sucks = chestSprite;
+        Sprite[] imsorryforwhat = legSprite;
+        Sprite[] ivedone = skinSprite;
+
+        if (thiscode == headSprite1 && isWalk) {
+            thiscode = headSprite1Walk;
+        }
+        if (thiscode == headSprite2 && isWalk) {
+            thiscode = headSprite2Walk;
+        }
+        if (sucks == chestSprite1 && isWalk) {
+            sucks = chestSprite1Walk;
+        }
+        if (sucks == chestSprite2 && isWalk) {
+            sucks = chestSprite2Walk;
+        }
+        if (imsorryforwhat == legSprite1 && isWalk) {
+            imsorryforwhat = legSprite1Walk;
+        }
+        if (imsorryforwhat == legSprite2 && isWalk) {
+            imsorryforwhat = legSprite2Walk;
+        }
+        if (ivedone == skinSprite && isWalk) {
+            ivedone = skinSpriteWalk;
+        }
+
+        // idle and walking have different length... this will make walk slightly favor 0-3 frames but who cares...
+        int trueIndex = animationIndex;
+        if (!isWalk) {
+            trueIndex /= 3;
+        }
+        trueIndex = trueIndex % thiscode.Length;
+
 
         GameObject child = transform.GetChild(0).gameObject; // head
         SpriteRenderer renderer = child.GetComponent<SpriteRenderer>();
-        renderer.sprite = headSprite[animationIndex];
+        renderer.sprite = thiscode[trueIndex];
 
         child = transform.GetChild(1).gameObject; // chest
         renderer = child.GetComponent<SpriteRenderer>();
-        renderer.sprite = chestSprite[animationIndex];
+        renderer.sprite = sucks[trueIndex];
 
         child = transform.GetChild(2).gameObject; // leg
         renderer = child.GetComponent<SpriteRenderer>();
-        renderer.sprite = legSprite[animationIndex];
+        renderer.sprite = imsorryforwhat[trueIndex];
 
         child = transform.GetChild(3).gameObject; // Skin
         renderer = child.GetComponent<SpriteRenderer>();
-        renderer.sprite = skinSprite[animationIndex];
+        renderer.sprite = ivedone[trueIndex];
+    }
+
+    public void setWalk(bool isWalk) {
+        this.isWalk = isWalk;
     }
 
     public void SetFlipX(bool flipX) {
