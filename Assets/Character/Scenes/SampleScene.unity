@@ -718,7 +718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2830189, g: 0.30352214, b: 0.3773585, a: 0.5882353}
+  m_Color: {r: 0.2830189, g: 0.30352214, b: 0.3773585, a: 0.972549}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2540,6 +2540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToToggle: {fileID: 181087204}
   menuText: {fileID: 257086961}
+  otherButton: {fileID: 1822761547}
 --- !u!1 &671227344
 GameObject:
   m_ObjectHideFlags: 0
@@ -4544,7 +4545,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.5
+  m_fontSize: 27.3
   m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4629,8 +4630,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 238, y: 0}
-  m_SizeDelta: {x: -40, y: -40}
+  m_AnchoredPosition: {x: 105.14, y: 8.63}
+  m_SizeDelta: {x: 0.21, y: 17.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1471772799
 MonoBehaviour:
@@ -4683,15 +4684,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
+  m_fontSize: 9.7
   m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 7
   m_fontSizeMax: 24
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5537,6 +5538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToToggle: {fileID: 4009130065407845129}
   shopText: {fileID: 1564464729}
+  otherButton: {fileID: 563724915}
 --- !u!1 &1950919791
 GameObject:
   m_ObjectHideFlags: 0
