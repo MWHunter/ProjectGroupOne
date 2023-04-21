@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Question 7
   m_EditorClassIdentifier: 
-  question: Who among the following had first invented the first electronic digital
-    computer?
+  question: "What is the output of the following JavaScript code?      function addNumbers(x,
+    y) {\r\n  var sum = x + y;\r\n  return sum;\r\n}\r\r\nvar result = addNumbers(5,
+    10);\r\nconsole.log(result);\r\n"
   answers:
-  - Jeff Bezos
-  - Mark Zuckerberg
-  - Jack Dorsey
-  - John Atanasoff
-  correctAnswerIndex: 3
+  - x+y
+  - 15
+  - NAn
+  - undefined
+  correctAnswerIndex: 1

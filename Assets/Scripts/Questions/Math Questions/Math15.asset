@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
-  m_Name: Question 9
+  m_Name: Math15
   m_EditorClassIdentifier: 
-  question: "What is the output of the following JavaScript code?\nvar x = 10;\r\r\nfunction
-    addNumbers(y) {\r\n  var x = 5;\r\n  return x + y;\r\n}\r\nconsole.log(addNumbers(20));\r"
+  question: You are helping with designing a rocket that needs to escape the Earth's
+    gravitational pull, which is 9.8 meters per second squared. If the rocket has
+    a mass of 100,000 kilograms, how much thrust is needed to escape Earth's gravitational
+    pull?
   answers:
-  - 15
-  - 25
-  - 30
-  - 23
+  - 98 million newtons
+  - 9.8 billion newtons
+  - 96 billion newtons
+  - 9 billion newtons
   correctAnswerIndex: 1

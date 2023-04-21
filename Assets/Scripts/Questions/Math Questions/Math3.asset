@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Math3
   m_EditorClassIdentifier: 
-  question: If 2(x + 5) = 10, what is the value of x?
+  question: You are a contractor building a pool in someone's backyard. The pool
+    is shaped like a rectangle with half of a circle at one end. The rectangle is
+    20 feet wide and 40 feet long, and the radius of the circle is 10 feet. What
+    is the total area of the pool?(Correct answer is 1400 for test purposes)
   answers:
-  - 0
-  - 4
-  - 10
-  - 45
+  - 1400
+  - 1600
+  - 1850
+  - 2023
   correctAnswerIndex: 0

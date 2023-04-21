@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Question 2
   m_EditorClassIdentifier: 
-  question: What is an algorithm?
+  question: Your company is building a website and wants to add a background image
+    to the page. Which CSS property is used to set the background image of an element?
   answers:
-  - A type of programming language
-  - A set of instructions to solve a problem
-  - A type of computer hardware
-  - A way to save data in a file
-  correctAnswerIndex: 1
+  - color
+  - background-color
+  - background-image
+  - font-size
+  correctAnswerIndex: 2

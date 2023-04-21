@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Question 3
   m_EditorClassIdentifier: 
-  question: What is a variable in programming?
+  question: Your company is building a website and wants to create a responsive design
+    that adjusts to different screen sizes. Which CSS property is used to create
+    a responsive design?
   answers:
-  - A constant value that never changes
-  - A function that performs a specific task
-  - A piece of data that can be modified during runtime
-  - A type of comment in code
-  correctAnswerIndex: 2
+  - font-size
+  - '@media'
+  - width
+  - height
+  correctAnswerIndex: 1

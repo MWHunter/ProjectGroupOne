@@ -1285,8 +1285,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281270419
-  m_fontColor: {r: 0.5754717, g: 0, b: 0.18416174, a: 1}
+    rgba: 4281874488
+  m_fontColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1443,11 +1443,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.05
+  m_fontSize: 21.2
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 11
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -1510,8 +1510,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 418.1, y: -92.70001}
-  m_SizeDelta: {x: 468.2, y: 67.2}
+  m_AnchoredPosition: {x: 413.23004, y: -87.130005}
+  m_SizeDelta: {x: 550.34, y: 72.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &831777073
 GameObject:
@@ -1867,7 +1867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 231.1, y: -301.2}
+  m_AnchoredPosition: {x: 231.10004, y: -301.2}
   m_SizeDelta: {x: 162.56, y: 39.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040000714
@@ -2787,8 +2787,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 747.27, y: -553.53}
-  m_SizeDelta: {x: 879.47, y: 64.17}
+  m_AnchoredPosition: {x: 747.27, y: -587.17}
+  m_SizeDelta: {x: 879.47, y: 66.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1679668569
 GameObject:
@@ -3475,6 +3475,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e01d99d30de353f42aedca2c90d6e2be, type: 2}
   - {fileID: 11400000, guid: b69fe25b99758ec40934735f422389a1, type: 2}
   - {fileID: 11400000, guid: 63602f40e317d0749bfd7f891afa50e1, type: 2}
+  - {fileID: 11400000, guid: ef566e04b054f1d4e80d82f5ccae8d67, type: 2}
+  - {fileID: 11400000, guid: 1b1d347ce7a2a634aa5330e272f33118, type: 2}
+  - {fileID: 11400000, guid: e5ec5df2005a46741ac4fdf8d25b877e, type: 2}
+  - {fileID: 11400000, guid: 16f3fc49f1e8b3d42abe393f09e69ec7, type: 2}
+  - {fileID: 11400000, guid: a48e08176088f9d4e8743c1c9e666063, type: 2}
+  - {fileID: 11400000, guid: 2e0d5780ead378048a27512d51ab0158, type: 2}
+  - {fileID: 11400000, guid: ac576d478f3640c49a913bb0bdb35bf4, type: 2}
+  - {fileID: 11400000, guid: 6eb1773dd4f37c441b0b5bff4a4388e4, type: 2}
+  - {fileID: 11400000, guid: 21a89452ab3de4942bef3cc2b388e824, type: 2}
+  - {fileID: 11400000, guid: 7457c31fb166b144e8d02706584b86df, type: 2}
   CSquestions:
   - {fileID: 11400000, guid: d6bf3caa6cb355846a9043a312371124, type: 2}
   - {fileID: 11400000, guid: ddf4af834c3d002499026e8e556b35f3, type: 2}
@@ -3482,6 +3492,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7f8eb18357db8484a995770776bfa6c5, type: 2}
   - {fileID: 11400000, guid: 2a16a598487ec6c43bfa401fde387e96, type: 2}
   - {fileID: 11400000, guid: 720f05cd1a84e85438b84a974a6a06c7, type: 2}
+  - {fileID: 11400000, guid: 47f9836fa35c0b848809c362267f7464, type: 2}
+  - {fileID: 11400000, guid: 0271c1efc20310442a78814b62f7c6a7, type: 2}
+  - {fileID: 11400000, guid: 36c1d97155a1f8f44a1d40bfe23bb933, type: 2}
+  - {fileID: 11400000, guid: d0c2ffefcf70bf345a9e7d97e5b90136, type: 2}
+  - {fileID: 11400000, guid: c5cb5bb274b88de47be5b61c2fbe010b, type: 2}
+  - {fileID: 11400000, guid: 888d15042105c6c4ca68a2a5fec11f10, type: 2}
+  - {fileID: 11400000, guid: dcfb85f4fd14acc4fab7b2c840aac617, type: 2}
+  - {fileID: 11400000, guid: 32295e059f571d142a00cc29d1298da9, type: 2}
+  - {fileID: 11400000, guid: 8dee83bae7cccef4382f3bc2bb5db34d, type: 2}
   levelText: {fileID: 2131554794}
   answerButtons:
   - {fileID: 1679668569}
@@ -3502,6 +3521,12 @@ MonoBehaviour:
   - levelName: Senior
     correctAnswersRequired: 4
     correctAnswerReward: 200
+  - levelName: 'Lead '
+    correctAnswersRequired: 6
+    correctAnswerReward: 250
+  - levelName: CEO
+    correctAnswersRequired: 8
+    correctAnswerReward: 300
 --- !u!114 &1929165253
 MonoBehaviour:
   m_ObjectHideFlags: 0

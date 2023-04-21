@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Question 10
   m_EditorClassIdentifier: 
-  question: What is the median salary of a computer and information technology occupations?
-    (bls.gov May 2021)
+  question: "What is the output of the following JavaScript code?\nconst numbers
+    = [5, 10, 15, 20];\r\nconst sum = numbers.reduce((total, num) => total + num);\r\n\r\nconsole.log(sum);\r"
   answers:
-  - $97,430
-  - $45,760
-  - $100,000,000
-  - $10,000
-  correctAnswerIndex: 0
+  - 10
+  - 20
+  - 30
+  - 50
+  correctAnswerIndex: 2

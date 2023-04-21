@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Question 6
   m_EditorClassIdentifier: 
-  question: What school did Satya Nadella (CEO of Microsoft 2023) graduate from with
-    a major in computer science?
+  question: "Now, for your second project you are going to debug code for our application.
+    Debug this code?\n  function calculateArea(width, height) {\r\n  var area = width
+    * height;\r\n  console.log(\"The area is: \" + area);\r\n}\r\ncalculateArea(5,
+    10);\r\n"
   answers:
-  - University of Wisconsin Milwaukee
-  - University of Cambridge Harvard
-  - The University of Chicago
-  - 'The University of Pennsylvania '
-  correctAnswerIndex: 0
+  - There is a syntax error in the code
+  - The function does not return a value
+  - The function is missing a parameter
+  - There is nothing wrong with the code
+  correctAnswerIndex: 3
