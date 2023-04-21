@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Question 29
   m_EditorClassIdentifier: 
-  question: Your team is working on a project that aims to identify genetic mutations
-    that can lead to drug resistance in patients with cancer. Which algorithm would
-    you use to identify the genetic mutations that are associated with drug resistance?
+  question: What is the role of a Scrum Master in Agile development?
   answers:
-  - K-Nearest Neighbor Algorithm
-  - Decision Tree Algorithm
-  - Random Forest Algorithm
-  - None of the above
+  - To write code
+  - To manage the team's tasks
+  - To facilitate the Agile process and remove impediments
+  - To design the user interface
   correctAnswerIndex: 2
