@@ -12,13 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Math13
   m_EditorClassIdentifier: 
-  question: You are helping with designing a falcon rocket that needs to carry a
-    payload of 5000 pounds. If the rocket has a thrust of 1,000,000 pounds, how long
-    will it take for the rocket to reach its maximum velocity of 10,000 miles per
-    hour?
+  question: If a 4-post lift is lifting a car that weighs 4,000 pounds, with a 10x
+    safety margin, how much weight must each post be able to hold?
   answers:
-  - 1 min
-  - 2 min
-  - 3 min
-  - 45 min
+  - 10,000 pounds
+  - 5,000 pounds
+  - 20,000 pounds
+  - 40,000 pounds
   correctAnswerIndex: 0

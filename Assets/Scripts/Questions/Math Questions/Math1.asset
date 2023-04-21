@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: Here is your first task as Math consultant for our home renovation project.
     We are building a fence around a rectangular garden that is 10 feet wide and
-    20 feet long. If each fence post is 5 feet apart, how many posts will we need?(Correct
-    answer is 11 for test purposes)
+    20 feet long. If each fence post is 5 feet apart, how many posts will we need?
   answers:
   - 5
   - 9
-  - 11
+  - 12
   - 15
   correctAnswerIndex: 2

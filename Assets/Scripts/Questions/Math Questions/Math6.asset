@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Math6
   m_EditorClassIdentifier: 
-  question: As for you second project, You are building a bridge that spans a river
-    that is 80 feet wide. If each section of the bridge is 20 feet long, how many
-    sections do you need to build the bridge?
+  question: We are building a bridge that spans a river that is 80 feet wide. If
+    each section of the bridge is 20 feet long, how many sections do you need to
+    build the bridge?
   answers:
   - 2
   - 4
   - 5
   - 6
-  correctAnswerIndex: 2
+  correctAnswerIndex: 1
