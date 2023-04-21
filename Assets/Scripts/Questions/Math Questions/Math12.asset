@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Math12
   m_EditorClassIdentifier: 
-  question: You are helping with designing a rocket that has a fuel tank that is
-    20 feet in diameter and 30 feet long. If the rocket uses a fuel that has a density
-    of 50 pounds per cubic foot, how much does the fuel tank weigh when full?
+  question: You are designing a rocket that has a cylindrical fuel tank 20 feet in
+    diameter and 30 feet tall. If the fuel has a density of 50 pounds per cubic foot,
+    how much does the fuel tank weigh when full?
   answers:
-  - 40,000 pounds
-  - 50,000 pounds
-  - 75,000 pounds
-  - 100,000 pounds
+  - 249,750 pounds
+  - 314,159 pounds
+  - 471,239 pounds
+  - 130,237 pounds
   correctAnswerIndex: 2

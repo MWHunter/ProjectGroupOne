@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: You are installing a laminate floor in a room that is 10 feet by 12 feet.
     If each box of laminate contains 20 square feet of flooring, how many boxes do
-    you need to cover the floor?(Correct answer is 7 for test purposes)
+    you need to cover the floor?
   answers:
   - 4
   - 5
   - 6
   - 7
-  correctAnswerIndex: 3
+  correctAnswerIndex: 2
