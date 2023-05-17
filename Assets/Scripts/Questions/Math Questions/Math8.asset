@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Math8
   m_EditorClassIdentifier: 
-  question: You are building a wall out of bricks, with each brick being 1 foot long
-    and 4 inches tall. Assuming that you can split bricks in half, how many bricks
-    will you need to create a wall that is 10 feet wide and 2 feet tall?
+  question: You are helping to build a suspension bridge that has two towers that
+    are 100 feet tall. If the cables are anchored 50 feet from each tower and the
+    total length of the cables is 500 feet, what is the distance between the towers?
   answers:
-  - 80
-  - 60
-  - 70
-  - 50
-  correctAnswerIndex: 1
+  - 300
+  - 340
+  - 400
+  - 412
+  correctAnswerIndex: 0

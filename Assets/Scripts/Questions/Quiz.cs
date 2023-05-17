@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class Quiz : MonoBehaviour
 {
-    public static Quiz index;
-
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] TextMeshProUGUI congratulationsText;
     [SerializeField] private AudioSource congratulationsAudio;
@@ -35,8 +33,6 @@ public class Quiz : MonoBehaviour
     
     int correctAnswerReward = 50;
     int wrongAnswerPenalty = 20;
-
-    public static int curQuestionIndex = -1; // We increment 1 before displaying
 
     void Start()
     {
@@ -98,26 +94,18 @@ public class Quiz : MonoBehaviour
     void GetNextQuestion()
     {
 
-        if(curQuestionIndex < questions.Count - 1)
+    
+        if(questions.Count > 0)
         {
             SetButtonState(true);
             SetDefaultButtonSprites();
-            curQuestionIndex++;
-            PlayerPrefs.SetInt("Question", curQuestionIndex);
-            currentQuestion = questions[curQuestionIndex];
+            currentQuestion = questions[0];
+            questions.RemoveAt(0);
             DisplayQuestion();
         }
         else
         {
-            string quizType = PlayerPrefs.GetString("QuizType", "Computer Science");
-            if (quizType == "Math")
-            {
-                questionText.text = "You completed your job! Try Computer Science!";
-            }
-            else {
-                questionText.text = "You completed your job! Try Math!";
-            }
-                
+            questionText.text = "Your task for today is finished!";
             SetButtonState(false);
         }
     }
