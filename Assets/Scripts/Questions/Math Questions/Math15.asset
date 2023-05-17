@@ -12,13 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Math15
   m_EditorClassIdentifier: 
-  question: You are helping with designing a rocket that needs to escape the Earth's
-    gravitational pull, which is 9.8 meters per second squared. If the rocket has
-    a mass of 100,000 kilograms, how much thrust is needed to escape Earth's gravitational
-    pull?
+  question: A truck is hauling rocket parts. If the truck's tires have a radius of
+    12 inches, how many revolutions will they make traveling 100 feet?
   answers:
-  - 98 million newtons
-  - 9.8 billion newtons
-  - 96 billion newtons
-  - 9 billion newtons
+  - 20 revolutions
+  - 15.9 revolutions
+  - 12.8 revolutions
+  - 24 revolutions
   correctAnswerIndex: 1
