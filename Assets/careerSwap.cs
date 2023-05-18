@@ -7,7 +7,6 @@ public class careerSwap : MonoBehaviour
 
     public void OnMouseDown()
     {
-        GameManager.Instance.ResetGameData();
         SceneManager.LoadScene(0);
     }
 }
