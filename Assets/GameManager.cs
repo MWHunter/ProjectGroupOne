@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     public List<QuestionSO> remainingQuestions;
     public int balance = 0;
 
+    public Sprite[] headSprite;
+    public Sprite[] chestSprite;
+    public Sprite[] legSprite;
+
     public double bonusChance = 0;
     public int bonusConstant = 0;
     public double bonusMultiplier = 1;
@@ -17,8 +21,6 @@ public class GameManager : MonoBehaviour
     public int correctAnswers = 0;
      public bool quizInitialized = false;
     [SerializeField] private ClickSound clickSound;
-
-
 
 
     private void Awake()
@@ -41,6 +43,9 @@ public class GameManager : MonoBehaviour
         levelIndex = 0;
         balance = 0; // Assuming that balance is a variable in GameManager, replace it with your own if different.
         GameProgress.Instance.currentQuestionIndex = 0; // Assuming this is where you are storing the current question index.
+        headSprite = null;
+        chestSprite = null;
+        legSprite = null;
         // Add any other variables that should be reset when a new game starts.
     }
     

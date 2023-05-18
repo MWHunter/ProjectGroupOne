@@ -5,6 +5,8 @@ using UnityEditor;
 
 public class SpriteSheetAnimator : MonoBehaviour
 {
+    public GameManager gameManager;
+
     public Sprite[] headSprite1;
     public Sprite[] headSprite1Walk;
     public Sprite[] headSprite2;
@@ -23,25 +25,21 @@ public class SpriteSheetAnimator : MonoBehaviour
     public Sprite[] skinSprite;
     public Sprite[] skinSpriteWalk;
 
-    public int headIndex = 0;
-    public int chestIndex = 0;
-    public int legIndex = 0;
     int animationIndex = 0;
 
     public float timeInterval = 0.3f;
     private float timer = 0f;
 
-    public Sprite[] headSprite;
-    public Sprite[] chestSprite;
-    public Sprite[] legSprite;
-
     bool isWalk;
 
     void Start()
     {
-        headSprite = headSprite1;
-        chestSprite = chestSprite1;
-        legSprite = legSprite1;
+        if (GameManager.Instance.headSprite.Length == 0) {
+            GameManager.Instance.headSprite = headSprite1;
+            GameManager.Instance.chestSprite = chestSprite1;
+            GameManager.Instance.legSprite = legSprite1;
+        }
+
         setSprites();
     }
 
@@ -57,9 +55,9 @@ public class SpriteSheetAnimator : MonoBehaviour
 
     void setSprites() {
         // blame hunter for this code :) it's terrible but gets the job done.
-        Sprite[] thiscode = headSprite;
-        Sprite[] sucks = chestSprite;
-        Sprite[] imsorryforwhat = legSprite;
+        Sprite[] thiscode = GameManager.Instance.headSprite;
+        Sprite[] sucks = GameManager.Instance.chestSprite;
+        Sprite[] imsorryforwhat = GameManager.Instance.legSprite;
         Sprite[] ivedone = skinSprite;
 
         if (thiscode == headSprite1 && isWalk) {

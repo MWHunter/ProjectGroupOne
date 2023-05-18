@@ -3712,6 +3712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8822668e2884e49807bd105d0ae881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1511713780}
   headSprite1:
   - {fileID: 259634166, guid: cadc59121348b8d40a46aeda4f93bdf5, type: 3}
   - {fileID: 1328092297, guid: cadc59121348b8d40a46aeda4f93bdf5, type: 3}
@@ -3796,13 +3797,7 @@ MonoBehaviour:
   - {fileID: 766744706, guid: 2f6fbf954b6eb2a43a18b313961f436f, type: 3}
   - {fileID: -1803471901, guid: 2f6fbf954b6eb2a43a18b313961f436f, type: 3}
   - {fileID: -1112451879, guid: 2f6fbf954b6eb2a43a18b313961f436f, type: 3}
-  headIndex: 0
-  chestIndex: 0
-  legIndex: 0
   timeInterval: 0.1
-  headSprite: []
-  chestSprite: []
-  legSprite: []
 --- !u!1 &938405933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3860,6 +3855,7 @@ MonoBehaviour:
   itemCost: 100
   buttonId: 1
   player: {fileID: 838423049}
+  spriteSheetAnimator: {fileID: 0}
 --- !u!114 &938405936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4781,6 +4777,9 @@ MonoBehaviour:
   currentQuestionIndex: 0
   remainingQuestions: []
   balance: 0
+  headSprite: []
+  chestSprite: []
+  legSprite: []
   bonusChance: 0
   bonusConstant: 0
   bonusMultiplier: 1
@@ -5596,6 +5595,7 @@ MonoBehaviour:
   itemCost: 300
   buttonId: 3
   player: {fileID: 838423049}
+  spriteSheetAnimator: {fileID: 0}
 --- !u!114 &1950919794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5747,6 +5747,7 @@ MonoBehaviour:
   itemCost: 250
   buttonId: 2
   player: {fileID: 838423049}
+  spriteSheetAnimator: {fileID: 0}
 --- !u!114 &1962991119
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class BuyItemScript : MonoBehaviour
     public GameObject player;
     private Button myButton;
 
-    private SpriteSheetAnimator spriteSheetAnimator;
+    public SpriteSheetAnimator spriteSheetAnimator;
 
     private void Start()
     {
@@ -30,18 +30,18 @@ public class BuyItemScript : MonoBehaviour
             if (buttonId == 1)
             {
                 // Button for upgraded hat that gives 25% at a bonus $50 per question
-                spriteSheetAnimator.headSprite = spriteSheetAnimator.headSprite2;
+                GameManager.Instance.headSprite = spriteSheetAnimator.headSprite2;
                 GameManager.Instance.bonusChance = 0.25;
             }
             else if (buttonId == 2)
             {
                 // A shirt to add an extra $50 per question
-                spriteSheetAnimator.chestSprite = spriteSheetAnimator.chestSprite2;
+                GameManager.Instance.chestSprite = spriteSheetAnimator.chestSprite2;
                 GameManager.Instance.bonusConstant = 50;
             }
             else if (buttonId == 3) {
                 // Pants to double the extra money for each question
-                spriteSheetAnimator.legSprite = spriteSheetAnimator.legSprite2;
+                GameManager.Instance.legSprite = spriteSheetAnimator.legSprite2;
                 GameManager.Instance.bonusMultiplier = 2;
             }
         }
