@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Math4
   m_EditorClassIdentifier: 
   question: You need to calculate the area of a square room for our renovation project
-    that measures 12 feet on each side. What is the area of the room?
+    that measures 12 feet on each side. What is the area of the room?(Correct answer
+    is 144 for test purposes)
   answers:
   - 24
   - 100

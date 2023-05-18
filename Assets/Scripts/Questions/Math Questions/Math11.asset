@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Math11
   m_EditorClassIdentifier: 
-  question: For your next project you will be helping NASA. You are building a starship
-    that will travel 1,000 miles to reach its destination. If the rocket travels
-    at a speed of 5,000 miles per hour, how many hours will it take for the rocket
-    to reach its destination?
+  question: For your next project you will be helping to SpaceX. You are helping 
+    build a starship that needs to travel 1000 miles to reach its destination. If
+    the rocket travels at a speed of 5000 miles per hour, how many hours will it
+    take for the rocket to reach its destination?
   answers:
-  - 0.1 hours
-  - 0.2 hours
-  - 0.3 hours
-  - 0.4 hours
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
   correctAnswerIndex: 1

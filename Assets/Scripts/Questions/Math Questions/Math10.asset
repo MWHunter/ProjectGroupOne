@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Math10
   m_EditorClassIdentifier: 
   question: You are helping to build a cable-stayed bridge that has one tower that
-    is 150 feet tall. If the cables are anchored 75 feet from the tower, what is
-    the angle between the cables and the tower?
+    is 150 feet tall. If the cables are anchored 75 feet from the tower and the total
+    length of the cables is 600 feet, what is the angle between the cables and the
+    tower?
   answers:
-  - 30.75 degrees
-  - 45.0 degrees
-  - 26.5 degrees
-  - 13.9 degrees
+  - 30 degree
+  - 40 degree
+  - 45 degree
+  - 55 degree
   correctAnswerIndex: 2

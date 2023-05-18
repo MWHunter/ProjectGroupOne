@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0f4769faf620348a8ff999fca7a63c, type: 3}
   m_Name: Math14
   m_EditorClassIdentifier: 
-  question: You are helping design a rocket that is 100 feet tall and has a diameter
-    of 15 feet. If the rocket is filled with a fuel that has a specific gravity of
-    1.5, how many pounds of fuel does the rocket hold when full?
+  question: You are helping with designing a rocket that is 100 feet tall and has
+    a diameter of 15 feet. If the rocket is filled with a fuel that has a specific
+    gravity of 1.5, how many pounds of fuel does the rocket hold when full?
   answers:
-  - 945,900 lbs
-  - 389,425 lbs
-  - 472,950 lbs
-  - 667,243 lbs
+  - 150,000
+  - 200,000
+  - 250,000
+  - 300,000
   correctAnswerIndex: 2
