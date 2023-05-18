@@ -35,6 +35,16 @@ public class GameManager : MonoBehaviour
         
     }
 
+     public void ResetGameData()
+    {
+        correctAnswers = 0;
+        levelIndex = 0;
+        balance = 0; // Assuming that balance is a variable in GameManager, replace it with your own if different.
+        GameProgress.Instance.currentQuestionIndex = 0; // Assuming this is where you are storing the current question index.
+        // Add any other variables that should be reset when a new game starts.
+    }
+    
+
     public void AddBalance(int amount)
     {
         if (amount > 0) {
