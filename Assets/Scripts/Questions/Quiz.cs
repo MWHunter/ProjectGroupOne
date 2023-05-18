@@ -20,6 +20,7 @@ public class Quiz : MonoBehaviour
     [SerializeField] Sprite defaultAnswerSprite;
     [SerializeField] Sprite correctAnswerSprite;
     [SerializeField] Button nextQuestionButton;
+    
     // Add a Level structure and define levels with their properties
     [System.Serializable]
     public struct Level
@@ -46,7 +47,7 @@ public class Quiz : MonoBehaviour
             questions = CSquestions;
         }
 
-
+        nextQuestionButton.gameObject.SetActive(false);
         
         GetNextQuestion();
         
@@ -56,51 +57,52 @@ public class Quiz : MonoBehaviour
 
 
 
-    public void OnAnswerSelected(int index)
+   public void OnAnswerSelected(int index)
+{
+    Image buttonImage;
+
+    if(index == currentQuestion.getCorrectAnswerIndex())
     {
-        Image buttonImage;
-        
-
-        if(index == currentQuestion.getCorrectAnswerIndex())
-        {
-            GameManager.Instance.correctAnswers++; // Increment the correct answers count
-            CheckLevelUp();
-            questionText.text = "Correct!";
-            GameManager.Instance.AddBalance(correctAnswerReward);
-            GameManager.Instance.AddBalance(levels[GameManager.Instance.levelIndex].correctAnswerReward); // Update to use the reward from the levels list
-            buttonImage = answerButtons[index].GetComponent<Image>();
-            buttonImage.sprite = correctAnswerSprite;;
-        }
-        else
-        {
-            int correctAnswerIndex = currentQuestion.getCorrectAnswerIndex();
-            string correctAnswer = currentQuestion.getAnswer(correctAnswerIndex);
-            questionText.text = "Sorry, the correct answer was;\n" + correctAnswer;
-            //GameManager.Instance.AddBalance(-wrongAnswerPenalty);
-            buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
-            buttonImage.sprite = correctAnswerSprite;
-        }
-
-        SetButtonState(false);
-        nextQuestionButton.gameObject.SetActive(true);
+        GameManager.Instance.correctAnswers++;
+        CheckLevelUp();
+        questionText.text = "Correct!";
+        GameManager.Instance.AddBalance(correctAnswerReward);
+        GameManager.Instance.AddBalance(levels[GameManager.Instance.levelIndex].correctAnswerReward);
+        buttonImage = answerButtons[index].GetComponent<Image>();
+        buttonImage.sprite = correctAnswerSprite;
     }
+    else
+    {
+        int correctAnswerIndex = currentQuestion.getCorrectAnswerIndex();
+        string correctAnswer = currentQuestion.getAnswer(correctAnswerIndex);
+        questionText.text = "Sorry, the correct answer was;\n" + correctAnswer;
+        buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
+        buttonImage.sprite = correctAnswerSprite;
+    }
+
+    SetButtonState(false);
+    nextQuestionButton.gameObject.SetActive(true);
+
+    // Increment the current question index immediately after an answer is selected.
+    GameProgress.Instance.currentQuestionIndex++;
+}
 
     public void OnNextQuestionButtonPressed()
     {
         nextQuestionButton.gameObject.SetActive(false);
+       // GameProgress.Instance.currentQuestionIndex++; // Update the question index
         GetNextQuestion();
+         nextQuestionButton.gameObject.SetActive(false);
     }
 
-    void GetNextQuestion()
+   void GetNextQuestion()
     {
-
-    
-        if(questions.Count > 0)
+        if(questions.Count > GameProgress.Instance.currentQuestionIndex)
         {
             SetButtonState(true);
             SetDefaultButtonSprites();
-            currentQuestion = questions[0];
-            questions.RemoveAt(0);
+            nextQuestionButton.gameObject.SetActive(false);
+            currentQuestion = questions[GameProgress.Instance.currentQuestionIndex];
             DisplayQuestion();
         }
         else
@@ -109,6 +111,7 @@ public class Quiz : MonoBehaviour
             SetButtonState(false);
         }
     }
+
 
     void DisplayQuestion()
     {
